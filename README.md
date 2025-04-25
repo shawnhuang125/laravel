@@ -24,7 +24,7 @@ C:\php\php-8.4.6-Win32-vs17-x64\
 - 點兩下
 - ![image](https://github.com/user-attachments/assets/4c45d7e3-5d6c-48bd-9ff1-3c649a89c3fd)
 - ![image](https://github.com/user-attachments/assets/4c660c3e-3ba0-434d-b710-ba3645105642)
-- 按下WIN+R輸入cmd.exe重新開一個終端介面
+- - 按下`WIN`+`R`輸入`cmd.exe`重新開一個終端介面
 - 輸入以下指令確認安裝成功
 ```
 php -v
@@ -37,11 +37,51 @@ Zend Engine v4.4.6, Copyright (c) Zend Technologies
 ```
 
 
-
-
-
-
-
-
 ### 2. 安裝Composer
+- 官方網址[下載連結](https://getcomposer.org/download/)
+- 點擊即可下載
+- ![image](https://github.com/user-attachments/assets/166b9380-b2ce-4f77-8bc9-ff5262f17d31)
+- ![image](https://github.com/user-attachments/assets/6c4ac39e-0135-4405-9a35-a3fbacd4b9bc)
+- ![image](https://github.com/user-attachments/assets/cf352367-a35a-4e82-b307-48373ae8fc12)
+- 這個畫面代表 Composer 成功偵測到你安裝好的 PHP 路徑,下一步
+- ![image](https://github.com/user-attachments/assets/bab940b5-7d95-454a-b23e-b6b5e37efc55)
+- ![image](https://github.com/user-attachments/assets/47c999c0-b4a3-40ab-b279-b3baad13a6b9)
+- ![image](https://github.com/user-attachments/assets/23c7bb9e-ac8e-4625-8dee-6a464423c7f2)
+- ![image](https://github.com/user-attachments/assets/5ad51df1-0fac-4f96-879c-7d525ad46d39)
+- ![image](https://github.com/user-attachments/assets/9a61c825-4888-46a5-90e3-54ed30d2b16a)
+- 輸入以下指令確認安裝成功
+```
+composer -V
+```
+- 應該看到類似以下輸出
+```
+Composer version 2.8.8 2025-04-04 16:56:46
+PHP version 8.4.6 (C:\php\php-8.4.6-Win32-vs17-x64\php.exe)
+Run the "diagnose" command to get more detailed diagnostics output.
+```
+
 ### 3. 安裝Laravel
+- 按下`WIN`+`R`輸入`cmd.exe`
+- 輸入以下指令安裝Laravel
+```
+composer global require laravel/installer
+```
+- 輸入以下指令
+```
+laravel --version
+```
+- 類似以下輸出代表安裝成功
+```
+Laravel Installer 5.14.2
+```
+## 新增專案
+- 移動到自己像要的目錄底下
+- 按下`WIN`+`R`輸入`cmd.exe`
+```
+laravel new your-project-name
+```
+- ![image](https://github.com/user-attachments/assets/d4b8d405-11e0-4066-b950-c7a4062b7f76)
+- ![image](https://github.com/user-attachments/assets/a89705c6-d6a3-46a6-9950-653652b72ab7)
+- ![image](https://github.com/user-attachments/assets/24dc9647-c393-43a2-8c05-29a61825d914)
+
+
