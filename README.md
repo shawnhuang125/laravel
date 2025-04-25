@@ -85,6 +85,17 @@ laravel new your-project-name
 - 輸入1
 - ![image](https://github.com/user-attachments/assets/24dc9647-c393-43a2-8c05-29a61825d914)
 - 使用Visual Studio Code來開發laravel專案
-- 
+- ![image](https://github.com/user-attachments/assets/8f970334-e076-4413-8e72-d9cefde38a58)
+```
+php artisan serve
+```
+- 點擊
+- ![image](https://github.com/user-attachments/assets/afd67fac-d504-456a-b0d0-ad5ecfce75b8)
+- 或瀏覽器url打上
+```
+http://127.0.0.1:8000/
+```
+
+
 
 
