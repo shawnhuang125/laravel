@@ -82,6 +82,9 @@ laravel new your-project-name
 ```
 - ![image](https://github.com/user-attachments/assets/d4b8d405-11e0-4066-b950-c7a4062b7f76)
 - ![image](https://github.com/user-attachments/assets/a89705c6-d6a3-46a6-9950-653652b72ab7)
+- 輸入1
 - ![image](https://github.com/user-attachments/assets/24dc9647-c393-43a2-8c05-29a61825d914)
+- 使用Visual Studio Code來開發laravel專案
+- 
 
 
