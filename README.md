@@ -1,4 +1,4 @@
-# Laravel Framwork
+# Laravel應用開發
 
 ## 環境安裝
 ### 1. 安裝PHP
