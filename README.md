@@ -5,6 +5,8 @@
 - [Laravel專案架構介紹](https://github.com/shawnhuang125/laravel/blob/main/laravel_framwork.md)
 - [web.php開發實戰]()
 - [index.vue開發實戰]()
+- ![image](https://github.com/user-attachments/assets/74fc32be-a1ae-48e4-99f4-0e4e3a07b189)
+
 
 
 
