@@ -1,7 +1,7 @@
 # Laravel應用開發
 
 ## 環境安裝
-- [說明文件]()
+- [環境安裝說明文件](https://github.com/shawnhuang125/laravel/blob/main/environment_configuration.md)
 ###  Laravel 完整專案架構說明 (開發文件)
 
 #### 資料夾與目錄用途
@@ -47,10 +47,9 @@
 - **前端樣式寫在 `resources/css/`，Vue 寫在 `resources/js/Pages/`**
 - **Controller 放在 `app/Http/Controllers/`，Database 用 `migrations` 建立**
 - **資料表用 `php artisan make:model Order -m` 同時建立 Model 與 Migration**
-
+- **前端頁面內容(.vue取代.html)寫在`js/Pages/`**
 ---
 
-要不要我給你一個可以直接 clone 下來開發的空模板？（含前端+API執行）❤️
 
 
 
