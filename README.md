@@ -1,98 +1,59 @@
 # Laravel應用開發
 
 ## 環境安裝
-### 1. 安裝PHP
-- 官方下載連結[下載連結](https://windows.php.net/download)
-- ![image](https://github.com/user-attachments/assets/5e8b022d-2274-4384-b86e-34a4797884ce)
-- 解壓縮
-- ![image](https://github.com/user-attachments/assets/0e142a67-8d7e-4c08-a60c-46a8c05cd8dd)
-- 複製`php.ini-development` 複製一份並重新命名為 `php.ini`
-- ![image](https://github.com/user-attachments/assets/ae9d8293-589a-48d3-8c46-197ba1fcee24)
-- ![image](https://github.com/user-attachments/assets/fcedc0f8-f8dd-4064-a66d-53ecb6117e88)
+- [說明文件]()
+###  Laravel 完整專案架構說明 (開發文件)
 
-- 使用VScode/notepad編輯`php.ini`
-- 將以下內容貼到該檔案的最底部
-- ![image](https://github.com/user-attachments/assets/5a014381-55e1-407f-a6d0-524400a3edb0)
-- 把 PHP 安裝路徑加到環境變數 Path 裡面
-```
-C:\php\php-8.4.6-Win32-vs17-x64\
-```
-- ![image](https://github.com/user-attachments/assets/1b3588d4-869e-466d-bab3-6ab5120660e9)
-- ![image](https://github.com/user-attachments/assets/61e29d94-d8fb-4536-a369-90949be4e16a)
-- ![image](https://github.com/user-attachments/assets/5acc8b41-9ffc-43f8-88fd-13be0a0a9295)
-- ![image](https://github.com/user-attachments/assets/e6d5510a-f631-4d62-a0d9-e0b83fd36db0)
-- 點兩下
-- ![image](https://github.com/user-attachments/assets/4c45d7e3-5d6c-48bd-9ff1-3c649a89c3fd)
-- ![image](https://github.com/user-attachments/assets/4c660c3e-3ba0-434d-b710-ba3645105642)
-- - 按下`WIN`+`R`輸入`cmd.exe`重新開一個終端介面
-- 輸入以下指令確認安裝成功
-```
-php -v
-```
-- 應該看到類似以下輸出
-```
-PHP 8.4.6 (cli) (built: Apr  9 2025 09:45:15) (ZTS Visual C++ 2022 x64)
-Copyright (c) The PHP Group
-Zend Engine v4.4.6, Copyright (c) Zend Technologies
-```
+#### 資料夾與目錄用途
+
+| 資料夾或檔案 | 用途 | 應該放的內容 |
+|--------------|------|----------------|
+| `app/` | 核心應用程式目錄 | 控制器、模型、服務層邏輯 |
+| ├— `Http/Controllers/` | 控制器 | 每個頁面或 API 的控制邏輯 |
+| ├— `Models/` | Eloquent 資料模型 | 每個資料表對應的 PHP 類別 |
+| ├— `Http/Middleware/` | 中介層 | 處理請求前/後的邏輯 |
+| `bootstrap/` | 啟動應用程式核心 | Laravel 啟動設定，不需修改 |
+| `config/` | 各類設定檔 | `app.php`、`database.php` 等設定 |
+| `database/` | 資料庫相關 | `migrations`、`seeders`、`factories` |
+| ├— `migrations/` | 資料表結構 | 定義資料表欄位與建立方式 |
+| ├— `seeders/` | 初始資料填入 | 建立測試資料、預設帳號 |
+| `public/` | 公開入口與資源 | `index.php` 入口檔、圖片、CSS、JS |
+| `resources/` | 前端資源（Blade、Vue、CSS） | 前端視圖與樣式 |
+| ├— `views/` | Blade 模板 | 後端演算頁面，像是 `welcome.blade.php` |
+| ├— `js/` | Vue、JS | 前端組件、Vue 路由、axios 請求 |
+| ├— `css/` | CSS 或 SCSS 檔案 | Tailwind、Bootstrap 或自訂樣式 |
+| `routes/` | 所有路由定義 | `web.php`（給瀏覽器）、`api.php`（給前端 AJAX） |
+| `storage/` | 快取、日誌、檔案上傳 | Laravel 自動使用的資料 |
+| `tests/` | 測試程式碼 | 單元測試、功能測試 |
+| `vendor/` | Laravel 套件 | Composer 安裝，自動產生，不要修改 |
+
+---
+
+#### 常見檔案說明
+
+| 檔案 | 功能 |
+|------|------|
+| `.env` | 環境變數（資料庫連線、APP_KEY、API 金鑰） |
+| `artisan` | Laravel CLI 指令列工具 |
+| `composer.json` | PHP 套件管理器設定 |
+| `package.json` | JavaScript 套件設定（如果有用 Vue/Vite） |
+| `vite.config.js` / `webpack.mix.js` | 前端打包器設定檔（Laravel 10使用 Vite） |
+
+---
+
+#### 實作建議
+
+- **API 請求寫在 `routes/api.php`**
+- **前端樣式寫在 `resources/css/`，Vue 寫在 `resources/js/Pages/`**
+- **Controller 放在 `app/Http/Controllers/`，Database 用 `migrations` 建立**
+- **資料表用 `php artisan make:model Order -m` 同時建立 Model 與 Migration**
+
+---
+
+要不要我給你一個可以直接 clone 下來開發的空模板？（含前端+API執行）❤️
 
 
-### 2. 安裝Composer
-- 官方網址[下載連結](https://getcomposer.org/download/)
-- 點擊即可下載
-- ![image](https://github.com/user-attachments/assets/166b9380-b2ce-4f77-8bc9-ff5262f17d31)
-- ![image](https://github.com/user-attachments/assets/6c4ac39e-0135-4405-9a35-a3fbacd4b9bc)
-- ![image](https://github.com/user-attachments/assets/cf352367-a35a-4e82-b307-48373ae8fc12)
-- 這個畫面代表 Composer 成功偵測到你安裝好的 PHP 路徑,下一步
-- ![image](https://github.com/user-attachments/assets/bab940b5-7d95-454a-b23e-b6b5e37efc55)
-- ![image](https://github.com/user-attachments/assets/47c999c0-b4a3-40ab-b279-b3baad13a6b9)
-- ![image](https://github.com/user-attachments/assets/23c7bb9e-ac8e-4625-8dee-6a464423c7f2)
-- ![image](https://github.com/user-attachments/assets/5ad51df1-0fac-4f96-879c-7d525ad46d39)
-- ![image](https://github.com/user-attachments/assets/9a61c825-4888-46a5-90e3-54ed30d2b16a)
-- 輸入以下指令確認安裝成功
-```
-composer -V
-```
-- 應該看到類似以下輸出
-```
-Composer version 2.8.8 2025-04-04 16:56:46
-PHP version 8.4.6 (C:\php\php-8.4.6-Win32-vs17-x64\php.exe)
-Run the "diagnose" command to get more detailed diagnostics output.
-```
 
-### 3. 安裝Laravel
-- 按下`WIN`+`R`輸入`cmd.exe`
-- 輸入以下指令安裝Laravel
-```
-composer global require laravel/installer
-```
-- 輸入以下指令
-```
-laravel --version
-```
-- 類似以下輸出代表安裝成功
-```
-Laravel Installer 5.14.2
-```
-## 新增專案
-- 移動到自己像要的目錄底下
-- 按下`WIN`+`R`輸入`cmd.exe`
-```
-laravel new your-project-name
-```
-- ![image](https://github.com/user-attachments/assets/d4b8d405-11e0-4066-b950-c7a4062b7f76)
-- ![image](https://github.com/user-attachments/assets/a89705c6-d6a3-46a6-9950-653652b72ab7)
-- 輸入1
-- ![image](https://github.com/user-attachments/assets/24dc9647-c393-43a2-8c05-29a61825d914)
-- 使用Visual Studio Code來開發laravel專案
-- ![image](https://github.com/user-attachments/assets/8f970334-e076-4413-8e72-d9cefde38a58)
-```
-php artisan serve
-```
-- 點擊
-- ![image](https://github.com/user-attachments/assets/afd67fac-d504-456a-b0d0-ad5ecfce75b8)
-- 或瀏覽器url打上
-```
 http://127.0.0.1:8000/
 ```
 
