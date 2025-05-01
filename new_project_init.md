@@ -10,4 +10,15 @@ composer require inertiajs/inertia-laravel
 ```
 npm run dev
 ```
-- 
+- 連線至SQL Server
+- 請執行以下 SQL 後再回 Laravel 測試連線功能
+```
+CREATE USER 'phpmyadmin'@'192.168.0.30' IDENTIFIED BY 'P@ssw0rd123!';
+GRANT ALL PRIVILEGES ON laravel_database.* TO 'phpmyadmin'@'192.168.0.30';
+FLUSH PRIVILEGES;
+```
+- 然後回到 Laravel 專案執行
+```
+php artisan config:clear
+php artisan serve
+```
