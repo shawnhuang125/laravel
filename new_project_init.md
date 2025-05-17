@@ -22,3 +22,9 @@ FLUSH PRIVILEGES;
 php artisan config:clear
 php artisan serve
 ```
+### 專案解壓縮後的初始化
+- 建議確認是不是解壓縮後多包了一層資料夾,如果有的化,只保留一層就正常了
+- 解壓後要執行以下指令來重建 vendor：
+```
+composer install
+```
