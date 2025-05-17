@@ -9,6 +9,12 @@
 
 - 使用VScode/notepad編輯`php.ini`
 - 將以下內容貼到該檔案的最底部
+```
+extension_dir = "ext"
+extension=mysqli
+estension=pdo_mysql
+date.timesone= Asia/Taipei
+```
 - ![image](https://github.com/user-attachments/assets/5a014381-55e1-407f-a6d0-524400a3edb0)
 - 把 PHP 安裝路徑加到環境變數 Path 裡面
 ```
@@ -71,6 +77,13 @@ laravel --version
 ```
 Laravel Installer 5.14.2
 ```
+- 若出現錯誤則代表出現安裝錯誤,需安裝git還有添加extension到php.ini
+- [git官網下載連結](https://git-scm.com/downloads/win)
+- 添加以下到`C:\php\php-8.4.7-nts-Win32-vs17-x64\php.ini`
+```
+extension=zip
+```
+  
 ## 新增專案
 - 移動到自己像要的目錄底下
 - 按下`WIN`+`R`輸入`cmd.exe`
