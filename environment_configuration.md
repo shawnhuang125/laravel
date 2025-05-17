@@ -62,8 +62,9 @@ Composer version 2.8.8 2025-04-04 16:56:46
 PHP version 8.4.6 (C:\php\php-8.4.6-Win32-vs17-x64\php.exe)
 Run the "diagnose" command to get more detailed diagnostics output.
 ```
-
-### 3. 安裝Laravel
+### 3. 安裝`Node.js`
+- [Node.js下載連結](https://nodejs.org/en/download)
+### 4. 安裝Laravel
 - 按下`WIN`+`R`輸入`cmd.exe`
 - 輸入以下指令安裝Laravel
 ```
