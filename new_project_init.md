@@ -28,3 +28,11 @@ php artisan serve
 ```
 composer install
 ```
+- ![image](https://github.com/user-attachments/assets/f75e43a1-9e54-41f0-ad71-34e27c02f237)
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+
+- 按下鍵盤 Y。
+- 按下 Enter。
+- ![image](https://github.com/user-attachments/assets/dec32056-9c6e-4bb4-87a5-6bff4d8a9924)
