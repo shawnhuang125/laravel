@@ -28,6 +28,7 @@ php artisan serve
 ```
 composer install
 ```
+### Policy更改
 - ![image](https://github.com/user-attachments/assets/f75e43a1-9e54-41f0-ad71-34e27c02f237)
 ```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
